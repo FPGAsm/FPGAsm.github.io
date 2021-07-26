@@ -82,7 +82,7 @@ At this point, all the low-level primitive-defs had been identified, placed and 
 
 ### Construct a wiring netlist
 
-It is a basic requirement that every pin of every placed primitive is connected to something.  The wiring process therefore consists of traversing the list of all placed primitives and wiring each wire, one by one, constructing nets.  We can walk up and down the instance-tree, tracing the wiring information provided to construct nets.  Each wire instruction has a single source and one or more sinks.  As we trace a wire, we have to record the position of fan-out and return to process the remaining sinks.  
+It is a basic requirement that every acive pin of every placed primitive is connected to something.  The wiring process therefore consists of traversing the list of all placed primitives and wiring each wire, one by one, constructing nets.  We can walk up and down the instance-tree, tracing the wiring information provided to construct nets.  Each wire instruction has a single source and one or more sinks.  As we trace a wire, we have to record the position of fan-out and return to process the remaining sinks.  
 
 A net consists of a source and one or more sinks.  These endpoints must be appropriately-directed pins of primitives, or special endpoints such as 'vcc'.  We are not interested in any objects along the way -- only primitives.
 
