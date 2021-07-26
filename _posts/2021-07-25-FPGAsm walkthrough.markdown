@@ -98,7 +98,7 @@ We are done!
 
 ## Debugging
 
-The resultant XDL file may be further processed to create a bitmap.  Xilinx tools may catch problems and output error messages.  Debugging is facilitated by the fact that every inst in the XDL file is named using the instance-path of the primitive.  If there is an instantiation problem, it is very easy to look up the module definitions from the bottom up and isolate the problem.
+The resultant XDL file may be further processed to create a bitstream.  Xilinx tools may catch problems and output error messages.  Debugging is facilitated by the fact that every inst in the XDL file is named using the instance-path of the primitive.  If there is an instantiation problem, it is very easy to look up the module definitions from the bottom up and isolate the problem.
 
 If there is a wiring problem, the XDL nets are likewise identified by the instance-path of the instance where the net originates.  Each sink is identified with the path of the target instance.
 
