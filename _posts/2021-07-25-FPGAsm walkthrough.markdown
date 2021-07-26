@@ -5,8 +5,6 @@ date:   2021-07-25 16:00:00 -0700
 categories: 
 ---
 
-# FPGAsm Internals Overview
-
 FPGAsm converts user's top module, expanding it using other user module definitions, and eventually reaching the bottom primitive-defs provided by the hardware-description XDLRC file.  The process consists of several distinct sequential tasks, roughly described below.  This is not an accurate description but an overview of the tasks at hand and strategies available.
 
 ## Construct a model of the FPGA hardware.
@@ -38,9 +36,9 @@ The module also keeps track of:
 
 The module definitions form a hierarchy of containment, with the top module being the root of the tree and lowest-level modules containing only primitive-defs as leaf nodes.  This description is downward-only - module definitions specify what other modules instances are to be included, but not which modules contain it itself.
 
-The first step is to traverse the definition tree from the top module, recursively following each requested instance type reference into its module definition, depth-first.  For each visited definition node we construct a corresponding instance structure, and link it into a mirroring tree of instances.  Instances keep a reference to the module definition and instance-local data.  
+The first step is to traverse the definition tree from the top module, recursively following each requested instance-type reference into its module definition, depth-first.  For each visited definition node we construct a corresponding instance structure, and link it into a mirroring tree of instances.  Instances keep a reference to the module definition and instance-local data.  
 
-The instance-model mirrors the definition tree hierarchy, with one major difference: the module hierarchy describes each module contents as references to their respective module definitions (the 'type' of each requested instance in FPGAsm source).  There may be many references to the same module definition.  To contrast that, our instance model creates a unique **instance** datastructure for each visited node.  
+The instance-model mirrors the definition tree hierarchy, with one major difference: the module hierarchy describes each module contents as references to their respective module definitions (the 'type' of each requested instance in FPGAsm source).  There may be many references to the same module definition (which is never duplicated).  To contrast that, our instance model creates a unique **instance** datastructure for each visited node.  
 
 Since each node in our tree is unique, each node can be linked to its container parent, allowing arbitrary traversal up or down the tree. 
 

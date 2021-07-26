@@ -22,7 +22,7 @@ Thinking of FPGAsm (and othre Hardware Description Languages) as programming lan
 
 We execute code many times, sequentially.  With FPGAsm we transfer the resultant circuit description to an FPGA board, once.
 
-More importantly, FPGAsm modules are really more like **macros** that are expanded.  A module is defined once and may be instantiated in many other modules; each instantiation is a different copy of the described circuit, placed in a different location on the FPGA.  A software subroutines are compiled to machine code actively called from many places when executed; an FPGAsm module is used as a **prototype** for creating instances of a circuit during compilation.  A module definition itself is not a circuit - it is internal fiction, a reference prototype used only during expansion to create a circuit.
+More importantly, FPGAsm modules are really more like **macros** that are expanded.  A module is defined once and may be instantiated in many other modules; each instantiation is a different copy of the described circuit, placed in a different location on the FPGA.  Software subroutines are compiled to machine code actively called from many places when executed; an FPGAsm module is used as a **prototype** for creating instances of a circuit fragment during expansion.  A module definition itself is not a circuit - it is internal fiction, a reference prototype used only during expansion to create a circuit.
 
 Unlike software, there is no penalty for creating very deep hierarchies of modules.  FPGAsm flattens them very fast - in milliseconds.  
 
