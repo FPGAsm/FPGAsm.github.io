@@ -22,6 +22,13 @@ This is a preliminary specification for CL-FPGASM module and instantiation synta
 | `<outpins>`          | list of sources for wiring |
 | `<body>`             | module definition |
 
+
+| Priority apples | Second priority | Third priority |
+|-------|--------|---------|
+| ambrosia | gala | red delicious |
+| pink lady | jazz | macintosh |
+| honeycrisp | granny smith | fuji |
+
 The pins parameters consist of a list of zero or more symbolic names of pins.  Buses are expressed as a cons pair containing a pin name symbol in car and the width of the bus in cdr.
 
 The body is a list of arbitrary Lisp expressions evaluated at the time the module is defined.  The body **may** contain instantiation expressions, making the module a container of module instances.  The body **must** contain one or more wire expressions, providing internal wiring from the module's inpins to internal circuitry and module's outputs.
