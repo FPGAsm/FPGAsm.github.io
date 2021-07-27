@@ -13,6 +13,7 @@ This is a preliminary specification for CL-FPGASM module and instantiation synta
 ```
 (MODULE <name> <mod-lambda-list> <inwires> <outwires> <body> )
 ```
+
 | parameter | description |
 | :-- | :-- |
 | `<name>`             | name of the module |
