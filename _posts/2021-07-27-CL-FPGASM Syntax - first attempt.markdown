@@ -12,13 +12,12 @@ This is a preliminary specification for CL-FPGASM module and instantiation synta
 ### Module Syntax
 ```
 (MODULE <name> <mod-lambda-list> <inwires> <outwires> <body> )
-
-<name>             name of the module;
-<mod-lambda-list>  parameters for instantiation
-<inpins>           list of sinks for wiring
-<outpins>          list of sources for wiring
-<body>             module definition
 ```
+|<name>             |name of the module |
+|<mod-lambda-list>  |parameters for instantiation |
+|<inpins>           |list of sinks for wiring |
+|<outpins>          |list of sources for wiring |
+|<body>             |module definition |
 
 The pins parameters consist of a list of zero or more symbolic names of pins.  Buses are expressed as a cons pair containing a pin name symbol in car and the width of the bus in cdr.
 
