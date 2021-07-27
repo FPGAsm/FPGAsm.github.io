@@ -55,7 +55,7 @@ Upon module definition, CL-FPGASM:
 
 This syntax fits naturally into Lisp, and allows us to use the Lisp engine to deal with nastiness of language develpment.  More imporantly we instantly inherit all the power of Lisp - scoped variables, flexible parameter passing, conditional constructs, loops, and most importantly, macros.
 
-The Xilinx usage of # and : characters is worked around using | to enclose symbols.  The G:LUT:D=0xAA expression is iffier as the Xilinx configuration parameters seem to be double-tiered.  For now I will treat `G:LUT:D=` as a single parameter in order to let the value be just the contents of the LUT...
+The Xilinx usage of # and : characters is worked around using `|` to enclose symbols.  The G:LUT:D=0xAA expression is iffier as the Xilinx configuration parameters seem to be double-tiered.  For now I will treat `G:LUT:D=` as a single parameter in order to let the value be just the contents of the LUT...
 
 
 
