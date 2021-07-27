@@ -35,7 +35,6 @@ Upon module definition, CL-FPGASM:
 
 ### A Simple example - a 2-bit counter
 ```
-
 (module CTR2(loc) (CLK CIN) ((OUT.2) COUT) (
   (SLICEL sll :loc (0.0)  :CLKINV CLK :COUTUSED 0 :CYINIT CIN 
     :CY0G 0 :CYSELG G :DYMUX 1 :GYMUX GXO  :FFX |#FF| :FFX_INIT_ATTR INIT0 :|G:LUT:D=| #xAAAA
@@ -50,7 +49,7 @@ Upon module definition, CL-FPGASM:
 
   (wire my vcc   sll F1  sll F2  sll F3
                  sll G2  sll G3  sll G4))
-
+```
 
 ### Discussion
 
