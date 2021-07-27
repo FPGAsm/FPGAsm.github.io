@@ -33,10 +33,9 @@ Upon module definition, CL-FPGASM:
 
 * Generates a macro of same name name and and module's lambda-list, to be used for instantiation of module's instances inside other modules.
 
-### A Simple example
-```
-;;; A 2-bit counter
+### A Simple example - a 2-bit counter
 
+```
 (module CTR2(loc) (CLK CIN) ((OUT.2) COUT) (
   (SLICEL sll :loc (0.0)  :CLKINV CLK :COUTUSED 0 :CYINIT CIN 
     :CY0G 0 :CYSELG G :DYMUX 1 :GYMUX GXO  :FFX |#FF| :FFX_INIT_ATTR INIT0 :|G:LUT:D=| #xAAAA
