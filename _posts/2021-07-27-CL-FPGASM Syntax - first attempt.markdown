@@ -15,8 +15,8 @@ This is a preliminary specification for CL-FPGASM module and instantiation synta
 
 <name>             name of the module;
 <mod-lambda-list>  parameters for instantiation
-<inpins>          list of sinks for wiring
-<outpins>         list of sources for wiring
+<inpins>           list of sinks for wiring
+<outpins>          list of sources for wiring
 <body>             module definition
 ```
 
@@ -46,7 +46,7 @@ Upon module definition, CL-FPGASM:
 
   (wire his COUT  my COUT)
   (wire his XQ    his F4  my (OUT 0) "close counter loop"
-  (wire his YQ    his G1, my (OUT 1) 
+  (wire his YQ    his G1, my (OUT 1)) 
 
   (wire my vcc   sll F1  sll F2  sll F3
                  sll G2  sll G3  sll G4))
