@@ -29,6 +29,8 @@ So now I am about six hours into this.  There seems to be no way to do this, sho
 
 100MBytes of bullshit, just to translate markdown to html.  This is complete garbage, and I can't believe I fell for it.  I could've written something in Forth or Lisp if I cared, and I don't.  Everyone says 'don't reinvent the wheel', but the wheel is inevitably 100Megabytes of shit code that does not work.
 
-Oh, now jekyll does not work on my main machine - it silently refuses to process this post.  If you ever read this, it's probably because I found another static site generator.  No wonder everything on the web is buggy - with tools like these who needs enemas...
+Oh, now jekyll does not work on my main machine - it silently refuses to process this post.  I will now delete jekyll and ruby and bundler and gems and all that garbage.  At least Github will just publish all posts...  
+
+No wonder everything on the web is buggy - with tools like these who needs enemas...
 
 
