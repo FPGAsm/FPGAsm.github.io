@@ -29,7 +29,7 @@ Google this... Apparently it's a thing - rsync has been locking up like this for
 Screw `rsync`.  I copied the directory using my file manager, started as root.  Let's see if it works...
 
 ...
-OK, I am running with the grafted `/var/lib`.  At least `apt` is not just crashing.  `sudo apt update` seems to be taking a really long time, getting hundres of megabytes of something.  OK, it kind of works.  `apt upgrade` completed with a bunch of warnings, but maybe that's ok.  
+OK, I am running with the grafted `/var/lib`.  At least `apt` is not just crashing.  `sudo apt update` seems to be taking a really long time, getting hundreds of megabytes of something.  And it's done, it kind of works.  `apt upgrade` completed with a bunch of warnings, but maybe that's ok.  
 
 Who knows what will fail now.  I will have to reinstall really soon.  
 
