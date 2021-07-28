@@ -24,10 +24,13 @@ In the meantime, I ordered a used LTO-5 drive from EBAY, as it is more appropria
 
 I've always used rsync for backups (which I haven't really done lately).  It seems to be what Linux people do.  So why the **** did it lock up on me while trying to copy the var/log directory from my laptop?  Is it my transfer drive?  No, it is always the same file - a 1.4kb text file I can open and look at with no issues, or copy by hand!
 
-Google this... Apparently it's a thing - rsync has been locking up like this for years!  I see a message from 2018 where the guy can't believe they haven't fixed it yet.  Is it because I am copying to a drive formatted for windows and the -a argument does not work?  Many think so.  But it does not work without the -a either.  Many say that -v, the verbose command is the culprit.  How the hell can you tell if it's working without it - I have a couple of gigabytes to copy.  Why is `/var/log` more than 2GB on my humble notebook?  That is completely crazy.
+Google this... Apparently it's a thing - rsync has been locking up like this for years!  I see a message from 2018 where the guy can't believe they haven't fixed it yet.  Is it because I am copying to a drive formatted for windows and the -a argument does not work?  Many think so.  But it does not work without the -a either.  Many say that -v, the verbose command is the culprit.  How the hell can you tell if it's working without it - I have a couple of gigabytes to copy.  Why is `/var/lib` more than 2GB on my humble notebook?  That is completely crazy.
 
 Screw `rsync`.  I copied the directory using my file manager, started as root.  Let's see if it works...
 
-Maybe one of these days I can actually do some work.
+...
+OK, I am running with the grafted `/var/lib`.  At least `apt` is not just crashing.  `sudo apt update` seems to be taking a really long time, getting hundres of megabytes of something.  OK, it kind of works.  `apt upgrade` completed with a bunch of warnings, but maybe that's ok.  
 
-To be continued
+Who knows what will fail now.  I will have to reinstall really soon.  
+
+
