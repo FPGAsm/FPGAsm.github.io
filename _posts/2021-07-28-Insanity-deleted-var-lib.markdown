@@ -4,7 +4,7 @@ title:  "Insanity: delete your /var/lib and see what happens"
 date:   2021-07-28 14:08:51 -0700
 categories: rant
 ---
-I am on a roll.  After a couple of days of trying to get Jekyll to work, I gave up and tried to delete it.  `sudo apt remove` what?  `ruby`? `jekyll`? `gem`? `bundler`?  I think all of those worked.  But when deleting ruby, a warning showed up that the directory `/var/lib/ruby/gems..` or something like that was not deleted.  OK, `sudo rm...` F*** S***.  Slip of the finger, and *POOF* the entire `/var/lib/` is gone.
+I am on a roll.  After a couple of days of trying to get Jekyll to work, I gave up and tried to delete it.  `sudo apt remove` what?  `ruby`? `jekyll`? `gem`? `bundler`?  I think all of those worked.  But when deleting ruby, a warning showed up that the directory `/var/lib/ruby/gems..` or something like that was not deleted.  OK, `sudo rm...` F\*\*\* S\*\*\*.  Slip of the finger, and *POOF* the entire `/var/lib/` is gone.
 
 ## A tragedy of errors
 
