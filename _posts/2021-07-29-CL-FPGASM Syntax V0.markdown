@@ -72,7 +72,7 @@ Each sink or source endpoint is represented by two sequential items: the pinhold
 
 #### PIN-HOLDER
 
-The pin-holder may be any of the instances of this modules, identified by the instance-name.  The most-recently-defined instance may also be referred to by pronouns `HIS`, `HER`, or `THEIR`.  Each instance has a set of pins declared in its respective module.  An instance's **in-pins** act as sinks, while its **out-pins** act as sources.
+The pin-holder may be any of the instances of this modules, identified by the instance-name.  The most-recently-defined instance may also be referred to by pronouns `HIS`, `HER`, `ITS` or `THEIR`.  Each instance has a set of pins declared in its respective module.  An instance's **in-pins** act as sinks, while its **out-pins** act as sources.
 
 The pin-holder may be the module itself, identified by the module's name or the symbol `MY`.  A module's **in-pins** act as sources for the wiring of the module, while its **out-pins** act as sinks (opposite of instance pins!)
 
