@@ -5,7 +5,7 @@ date:   2021-07-28 12:37:00 -0700
 categories: cl-fpgasm
 ---
 
-## CL-FPGASM Syntax v.01
+## CL-FPGASM Syntax v.02
 
 This is a preliminary specification for CL-FPGASM module and instantiation syntax.
 
@@ -46,6 +46,7 @@ During the evaluation of the body, instancing expressions add to `*THIS-MODULE*`
 ```
 (<mod-name> <inst-name> <args>)
 ```
+
 | mod-name | name of the module being instantiated |
 | inst-name | name of this instance |
 | args | instantiation arguments
@@ -59,6 +60,7 @@ The arguments **MUST** match the mod-lambda-list, using normal Lisp rules.  The 
 ```
 (WIRE <source-pinholder> <source-pin-id> [/to/and] <sink-pinholder> <sink-pin-id> ...)
 ```  
+
 | source-pinholder | name of the object containing the source pin or pin-bus |
 | source-pin-id | pin identifier of the source pin or pin-bus |
 | to and | optional syntax sugar for readability |
