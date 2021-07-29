@@ -4,9 +4,6 @@ title:  "CL-FPGASM Syntax v.02"
 date:   2021-07-28 12:37:00 -0700
 categories: cl-fpgasm
 ---
-
-## CL-FPGASM Syntax v.02
-
 This is a preliminary specification for CL-FPGASM module and instantiation syntax.
 
 ### Module Syntax
@@ -51,7 +48,7 @@ During the evaluation of the body, instancing expressions add to `*THIS-MODULE*`
 | inst-name | name of this instance |
 | args | instantiation arguments
 
-Instantiations occurs during the macroexpansion of the containing module definition, and result in an INST structures being created and added to the module's instance array.  Each previously-defined module provides an instantiation macro of the same name, to be used exclusively inside later module definitions.  The macro has the same lambda list as the one provided to the module.  
+Instantiations occur during the macroexpansion of the containing module definition, and result in an INST structures being created and added to the module's instance array.  Each previously-defined module provides an instantiation macro of the same name, to be used exclusively inside later module definitions.  The macro has the same lambda list as the one provided to the module.  
 
 The arguments **MUST** match the mod-lambda-list, using normal Lisp rules.  The arguments are evaluated and stored in the INST structure along with parameter names in a key-value database.  The INST structure keeps a reference the the module representing this instance.
 
