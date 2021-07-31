@@ -51,10 +51,11 @@ The instantiation arguments (args) **MUST** match the mod-lambda-list, using nor
 ### Wiring syntax
 
 ```
-(WIRE <source-pinholder> <source-pin-id> [/to/and] <sink-pinholder> <sink-pin-id> ...)
+(WIRE <srr-pinholder> <src-pin-id> [/to/and] <sink-pinholder> <sink-pin-id> ...)
 ```  
-| source-pinholder | name of the object containing the source pin or pin-bus |
-| source-pin-id | pin identifier of the source pin or pin-bus |
+
+| src-pinholder | name of the object containing the source pin or pin-bus |
+| src-pin-id | pin identifier of the source pin or pin-bus |
 | `to` `and`  | optional syntax sugar for readability |
 | sink-pinholder | name of object containing the sink pin or pin-bus |
 | sink-pin-id | pin identifier of the sink pin or pin-bus |
@@ -78,7 +79,7 @@ A pin-id must a symbol or a list containing a symbol and one or more integer ind
 | name | a single pin |
 | name | all pins of a bus in ascending order |
 | ( name idx ) | an single bus pin at index |
-| ( name idx1 ... ) a grouping of indexed pins from a bus in the order specified |
+| ( name idx1 ... ) | a grouping of indexed pins from a bus in the order specified |
 
 In case of a scalar pin, pin-id is simply the name of the pin.
 
