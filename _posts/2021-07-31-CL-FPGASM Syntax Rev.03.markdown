@@ -103,7 +103,7 @@ The grouping syntax allows arbitrary ordering of the indexed pins of a single bu
                  sll G2  sll G3  sll G4))
 ```
 
-### Notes
+### NotesGASM Syntax V02.markdown
 
 The FPGASM syntax fits naturally into Lisp. For instance, the `&in` and `&out` pin-list keywords act much like Lisp's own lambda-list-keywords. 
 
