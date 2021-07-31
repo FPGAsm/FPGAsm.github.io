@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "CL-FPGASM Syntax Rev.03"
-date:   2021-07-29 12:37:00 -0700
+date:   2021-07-31 12:37:00 -0700
 categories: cl-fpgasm
 ---
 This is a preliminary specification for CL-FPGASM module and instantiation syntax.
