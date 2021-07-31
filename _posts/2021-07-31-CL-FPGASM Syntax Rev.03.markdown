@@ -51,7 +51,7 @@ The instantiation arguments (args) **MUST** match the mod-lambda-list, using nor
 ### Wiring syntax
 
 ```
-(WIRE <srr-pinholder> <src-pin-id> [/to/and] <sink-pinholder> <sink-pin-id> ...)
+(WIRE <src-pinholder> <src-pin-id> [/to/and] <sink-pinholder> <sink-pin-id> ...)
 ```  
 
 | src-pinholder | name of the object containing the source pin or pin-bus |
@@ -106,7 +106,7 @@ The grouping syntax allows arbitrary ordering of the indexed pins of a single bu
                  sll G2  sll G3  sll G4))
 ```
 
-### NotesGASM Syntax V02.markdown
+### Notes
 
 The FPGASM syntax fits naturally into Lisp. For instance, the `&in` and `&out` pin-list keywords act much like Lisp's own lambda-list-keywords. 
 
