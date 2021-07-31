@@ -42,6 +42,8 @@ During module definition, CL-FPGASM:
 | type | module being instantiated |
 | args | instantiation arguments |
 
+The name of the instance must not compete with any other in-scope names, module names, or reserved words `TO`, `AND`, `HIS`, `HER`, `THEIR`, `GND` and `VCC`.
+
 An `INST` clause **must** be inside a module definition, and is an infrastructural element.  It is used during module definition to construct an INST structure in the containing module's instance array.  
 
 The instantiation arguments (args) **MUST** match the mod-lambda-list, using normal Lisp rules.   Args are not evaluated until parametrization.   An argument may be an atom or a valid Lisp expression in the current scope.
@@ -53,7 +55,7 @@ The instantiation arguments (args) **MUST** match the mod-lambda-list, using nor
 ```  
 | source-pinholder | name of the object containing the source pin or pin-bus |
 | source-pin-id | pin identifier of the source pin or pin-bus |
-| to and | optional syntax sugar for readability |
+| `to` `and`  | optional syntax sugar for readability |
 | sink-pinholder | name of object containing the sink pin or pin-bus |
 | sink-pin-id | pin identifier of the sink pin or pin-bus |
 
@@ -65,7 +67,7 @@ Group endpoints represent the wiring of buses, and each pin of a group source en
 
 #### PIN-HOLDER
 
-The pin-holder may be any of the instances of this modules, identified by the instance-name.  The most-recently-defined instance may also be referred to by pronouns `HIS`, `HER`, `ITS` or `THEIR`.  Each instance has a set of pins declared in its respective module.  An instance's **in-pins** act as sinks, while its **out-pins** act as sources.
+The pin-holder must be an instance-name of an INST previously declared in this module.  The most-recently-defined instance may also be referred to by pronouns `HIS`, `HER`, `ITS` or `THEIR`.  Each instance has a set of pins declared in its the instance-type-module.  An instance's **in-pins** act as sinks, while its **out-pins** act as sources.
 
 The pin-holder may be the module itself, identified by the module's name or the symbol `MY`.  A module's **in-pins** act as sources for the wiring of the module, while its **out-pins** act as sinks (opposite of instance pins!)
 
